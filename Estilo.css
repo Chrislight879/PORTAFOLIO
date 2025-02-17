@@ -168,6 +168,21 @@ header p {
     text-align: left; /* Para asegurarnos de que el texto esté alineado a la izquierda dentro del contenedor */
 }
 
+#contacto-item2 {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center; /* Centra los elementos dentro del ítem */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    min-width: 270px;
+    margin-bottom: 20px;
+    text-align: left; /* Para asegurarnos de que el texto esté alineado a la izquierda dentro del contenedor */
+}
+
 #contacto-item img {
     width: 100px;
     height: 100px;
@@ -311,12 +326,21 @@ footer {
         margin-bottom: 20px;
     }
 
+    #contacto-item {
+        width: 90%; /* Hace que los elementos de contacto sean más anchos */
+        margin-bottom: 20px;
+    }
+
     #contacto h2 {
         font-size: 1.5em; /* Reducción del tamaño del título */
     }
 
     #contacto-item p {
         font-size: 0.9rem; /* Reduce el tamaño del texto dentro de los ítems de contacto */
+    }
+
+    #contacto-item p {
+        font-size: 0.6rem; /* Reduce el tamaño del texto dentro de los ítems de contacto */
     }
 
     .btn {
