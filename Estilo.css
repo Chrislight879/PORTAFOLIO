@@ -281,35 +281,35 @@ footer {
         display: flex;
         flex-direction: column; /* Alinea los elementos en una columna */
         align-items: center; /* Alineación horizontal centrada */
-        height: 900px; /* Altura completa de la ventana (puedes ajustar según sea necesario) */
+        height: auto; /* Ajusta la altura a lo necesario */
         position: relative; /* Necesario para usar posicionamiento absoluto en los elementos */
         background-color: white;
     }
-    
+
     .section img {
-        width: 120px;
+        width: 100px; /* Ajusta el tamaño de las imágenes */
+        height: 100px;
+    }
+
+    .section .img-large {
+        width: 120px; /* Ajusta el tamaño de las imágenes grandes */
         height: 120px;
     }
 
-    .section .img-large{
-        width: 140px;
-        height: 140px;
-    }
-
     #contacto-container {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Alinea los elementos uno encima del otro */
         align-items: center;
         padding: 20px;
     }
 
     #contacto-item {
-        width: 90%;
+        width: 90%; /* Hace que los elementos de contacto sean más anchos */
         margin-bottom: 20px;
     }
 
-    /* Reducir el tamaño del texto en la sección de contacto */
     #contacto h2 {
-        font-size: 1.5em; /* Reduce el tamaño del título */
+        font-size: 1.5em; /* Reducción del tamaño del título */
     }
 
     #contacto-item p {
@@ -317,7 +317,7 @@ footer {
     }
 
     .btn {
-        width: 100%;
+        width: 100%; /* Hace que el botón ocupe el 100% de la anchura */
         margin-left: 0;
     }
 
