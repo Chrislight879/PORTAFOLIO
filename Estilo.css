@@ -213,8 +213,6 @@ footer {
     padding: 20px 0;
 }
 
-
-
 /* Contenedor de las imágenes para que estén alineadas */
 .section {
     display: flex;
@@ -223,41 +221,39 @@ footer {
     height: 25vh; /* Altura completa de la sección */
     position: relative; /* Necesario para usar absolute en las imágenes */
     background-color: white;
-  }
-  
-  /* Estilo para las imágenes */
-  .section img {
+}
+
+/* Estilo para las imágenes */
+.section img {
     width: 10vw; /* Tamaño base más pequeño de las imágenes */
     height: auto; /* Mantiene la proporción de las imágenes */
     object-fit: cover; /* Cubre el área sin distorsionar */
     filter: grayscale(0%); /* Al principio están a color */
     transition: transform 0.5s ease, filter 0.5s ease; /* Transición suave para el cambio de tamaño y color */
     animation: breathing 5s infinite; /* Efecto breathing */
-  }
+}
 
-  /* Estilo para imágenes grandes */
+/* Estilo para imágenes grandes */
 .img-large img {
     width: 230px; /* Cambia este tamaño según necesites */
     height: auto;
 }
-  
-  /* Animación de breathing */
-  @keyframes breathing {
+
+/* Animación de breathing */
+@keyframes breathing {
     0% {
-      transform: scale(0.7); /* Más pequeño al principio */
-      filter: grayscale(100%); /* En blanco y negro cuando está pequeño */
+        transform: scale(0.7); /* Más pequeño al principio */
+        filter: grayscale(100%); /* En blanco y negro cuando está pequeño */
     }
     50% {
-      transform: scale(1); /* Tamaño original */
-      filter: grayscale(0%); /* Vuelve a ser color */
+        transform: scale(1); /* Tamaño original */
+        filter: grayscale(0%); /* Vuelve a ser color */
     }
     100% {
-      transform: scale(0.7); /* Vuelve a ser pequeño */
-      filter: grayscale(100%); /* En blanco y negro */
+        transform: scale(0.7); /* Vuelve a ser pequeño */
+        filter: grayscale(100%); /* En blanco y negro */
     }
-  }
-  
-  
+}
 
 /* Media Queries para hacerlo responsive */
 
@@ -299,6 +295,11 @@ footer {
     .btn {
         width: 100%;
         margin-left: 0;
+    }
+
+    /* Solución para evitar desplazamiento horizontal */
+    body {
+        overflow-x: hidden;
     }
 }
 
