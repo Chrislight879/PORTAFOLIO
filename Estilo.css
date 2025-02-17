@@ -299,11 +299,21 @@ footer {
     #contacto-container {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
 
     #contacto-item {
         width: 90%;
         margin-bottom: 20px;
+    }
+
+    /* Reducir el tamaño del texto en la sección de contacto */
+    #contacto h2 {
+        font-size: 1.5em; /* Reduce el tamaño del título */
+    }
+
+    #contacto-item p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto dentro de los ítems de contacto */
     }
 
     .btn {
@@ -314,27 +324,5 @@ footer {
     /* Solución para evitar desplazamiento horizontal */
     body {
         overflow-x: hidden;
-    }
-}
-
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 1024px) {
-    .projects-container {
-        display: block;
-        width: 100%;
-    }
-
-    .project-item {
-        width: 80%;
-        height: auto;
-        margin: 20px auto;
-    }
-
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    header p {
-        font-size: 1.4em;
     }
 }
