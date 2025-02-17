@@ -1,0 +1,369 @@
+/* Cargar la tipografía Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    color: #00FF00; /* Verde claro típico de la Matrix */
+}
+
+/* Para el texto de bienvenida */
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/* Typing animation (opcional) */
+.text .typing {
+    font-weight: bold;
+    color: #00FF00;
+    border-right: 3px solid #00FF00;
+}
+
+/* Animación de typing */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing {
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards;
+}
+
+/* Estilos para el Header */
+header {
+    position: relative;
+    height: 50vh; /* Hace que el header ocupe toda la altura de la pantalla */
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/hd/e4316a93890387.5e70ade47b737.gif'); /* URL del GIF */
+    background-size: cover; /* Asegura que el GIF cubra todo el área del header */
+    background-position: center; /* Centra el GIF */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color de los textos */
+    text-align: center;
+    
+}
+
+/* El contenido del header (texto y demás) */
+header h1, header p, .text {
+    position: relative; /* Asegura que los textos estén por encima del fondo */
+    z-index: 2; /* Hace que el contenido esté por encima del GIF */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo opaco negro (60% opaco) */
+    padding: 20px; /* Añade algo de espacio alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados para que el fondo se vea más estético */
+}
+
+/* Opcional: puedes ajustar el tamaño del texto */
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+/* Animación para el texto typing */
+.text {
+    font-size: 1.8em;
+    z-index: 2;
+}
+
+
+/* Estilos de la sección de Proyectos */
+#proyectos {
+    padding: 50px 20px;
+    background-color: #2c2828;
+    position: relative;
+}
+
+#proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 2s ease-out; /* Animación de entrada para los títulos de secciones */
+}
+
+/* Contenedor de Proyectos con Scroll Horizontal */
+.projects-scroll {
+    width: 100%;
+    overflow-x: scroll; /* Habilita el scroll lateral */
+    white-space: nowrap;
+    padding-bottom: 20px;
+    position: relative;
+    animation: slideInFromRight 2s ease-out; /* Animación para el scroll */
+}
+
+
+.projects-container {
+    display: inline-flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.project-item {
+    background-color: #eaefef;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 500px; /* Ancho fijo para los proyectos */
+    height: 300px;
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+}
+
+.project-item img {
+    width: 100%;
+    height: 20  0px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Efecto al pasar el cursor por encima de un proyecto */
+.project-item:hover {
+    transform: translateY(-10px); /* Eleva el proyecto al pasar el cursor */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más grande */
+}
+
+/* Sección de Contacto */
+#contacto {
+    padding: 50px 20px;
+    background-color: #2c2828;
+    color: white;
+    text-align: center;
+}
+
+#contacto-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas si es necesario */
+    justify-content: space-between; /* Se asegura de que haya espacio entre los elementos */
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+}
+
+#contacto-item {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Asegura que los dos primeros ocupen el 50% del ancho */
+    min-width: 270px; /* Establece un ancho mínimo para que no se aplasten */
+    margin-bottom: 20px; /* Espacio entre las filas */  
+}
+
+#contacto-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#contacto-item p {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+}
+
+#contacto a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contacto a:hover {
+    color: #1abc9c;
+}
+
+/* Estilos para el botón de descarga */
+.btn {
+    background-color: black; /* Fondo verde */
+    color: #00FF00; /* Texto en negro */
+    padding: 10px 20px;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+/* Al pasar el ratón */
+.btn:hover {
+    background-color: rebeccapurple; /* Fondo negro */
+    color: black; /* Texto verde */
+}
+
+
+
+/* Pie de página */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.section {
+    background-color: white;
+    display: flex;
+    justify-content: center; /* Alineación a la izquierda */
+    height: 200px;
+    overflow: hidden;
+    border: 8px solid  #2c2828;
+}
+
+
+.section img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    filter: grayscale(100%);
+}
+
+.section img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 1s ease; /* Transición suave para el cambio de tamaño y color */
+    animation: breathing 3s infinite; /* Aplicar la animación "breathing" */
+    margin-top: -10px;
+}
+
+.section .small img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+.section .small img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 1s ease; /* Transición suave para el cambio de tamaño y color */
+    animation: breathing 3s infinite; /* Aplicar la animación "breathing" */
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.section .small2 img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+.section .small2 img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 1s ease; /* Transición suave para el cambio de tamaño y color */
+    animation: breathing 3s infinite; /* Aplicar la animación "breathing" */
+    margin-top: 25px;
+    margin-left: -10px;
+}
+
+.section .small3 img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+.section .small3 img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 1s ease; /* Transición suave para el cambio de tamaño y color */
+    animation: breathing 3s infinite; /* Aplicar la animación "breathing" */
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.section .large img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+.section .large img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 1s ease; /* Transición suave para el cambio de tamaño y color */
+    animation: breathing 3s infinite; /* Aplicar la animación "breathing" */
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+.section .large2 img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+.section .large2 img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 1s ease; /* Transición suave para el cambio de tamaño y color */
+    animation: breathing 3s infinite; /* Aplicar la animación "breathing" */
+    margin-top: -25px;
+    margin-left: -20px;
+}
+
+
+
+
+/* Definir la animación "breathing" */
+@keyframes breathing {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+        filter: grayscale(100%); /* Blanco y negro */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta el tamaño en 10% */
+        filter: grayscale(0%); /* Vuelve a color */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+        filter: grayscale(100%); /* Vuelve a blanco y negro */
+    }
+}
