@@ -279,12 +279,13 @@ footer {
 
     .section {
         display: flex;
-        justify-content: column; /* Alinea las imágenes a lo largo de la sección */
-        align-items: center; /* Alineación vertical centrada */
-        height: relative; /* Altura completa de la sección */
-        position: relative; /* Necesario para usar absolute en las imágenes */
+        flex-direction: column; /* Alinea los elementos en una columna */
+        align-items: center; /* Alineación horizontal centrada */
+        height: relative; /* Altura completa de la ventana (puedes ajustar según sea necesario) */
+        position: relative; /* Necesario para usar posicionamiento absoluto en los elementos */
         background-color: white;
     }
+    
     .section img {
         width: 120px;
         height: 120px;
