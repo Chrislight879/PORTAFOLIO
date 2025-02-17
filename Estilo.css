@@ -281,7 +281,7 @@ footer {
         display: flex;
         flex-direction: column; /* Alinea los elementos en una columna */
         align-items: center; /* Alineación horizontal centrada */
-        height: relative; /* Altura completa de la ventana (puedes ajustar según sea necesario) */
+        height: 900px; /* Altura completa de la ventana (puedes ajustar según sea necesario) */
         position: relative; /* Necesario para usar posicionamiento absoluto en los elementos */
         background-color: white;
     }
