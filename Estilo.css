@@ -146,12 +146,13 @@ header p {
 #contacto-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Centra los elementos en la pantalla */
     padding: 20px;
     gap: 20px;
     text-align: center;
 }
 
+/* Estilos para los ítems de contacto */
 #contacto-item {
     background-color: white;
     display: flex;
@@ -159,10 +160,12 @@ header p {
     padding: 20px;
     border-radius: 8px;
     align-items: center;
+    justify-content: center; /* Centra los elementos dentro del ítem */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(50% - 10px);
     min-width: 270px;
     margin-bottom: 20px;
+    text-align: left; /* Para asegurarnos de que el texto esté alineado a la izquierda dentro del contenedor */
 }
 
 #contacto-item img {
